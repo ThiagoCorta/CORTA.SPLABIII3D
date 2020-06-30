@@ -1,0 +1,102 @@
+.fieldset-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  width: 570px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.fieldset-container button:hover,
+.fieldset-container button:active,
+.fieldset-container button:focus {
+  background: #1a1a1a;
+}
+
+.fieldset-container label {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-class input[type="radio"] {
+  width: 30px;
+}
+
+.wrapper-class label {
+  display: inline-block;
+}
+
+body {
+  background: white;
+}
+th {
+  background-color: #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-control-input {
+  color: white;
+}
+.loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0px 0px -50px;
+  z-index: 9990;
+}
+
+.show-spinner {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px 5px;
+  position: relative;
+  top: 4px;
+}
+
+.button-icon {
+  display: inline;
+  width: 13px;
+  height: 13px;
+  margin-right: 4px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.logo {
+  padding: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.svg-white {
+  filter: invert(78%) sepia(99%) saturate(4%) hue-rotate(28deg) brightness(110%)
+    contrast(89%);
+}
+.pointer-event-none {
+  pointer-events: none;
+}

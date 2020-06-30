@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="./css/styles.css" />
+      <script src="./js/scripts.js" type="module" defer></script>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+         <a class="navbar-brand" href="#">
+         <img
+            src="./img/logo.svg"
+            alt="Logo"
+            class="logo d-inline-block align-top svg-white"
+            />
+         </a>
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#"
+                  >Nosotros <span class="sr-only">(current)</span></a
+                  >
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Anuncios</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">Contacto</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="banner">
+         <img src="./img/animales.jpg" alt="Gatos" />
+      </div>
+      <div id="spinner"></div>
+      <div class="form-container">
+         <fieldset class="fieldset-container">
+            <form>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="title">Titulo</label>
+                     <input class="form-control" type="text" placeholder="Titulo" id="titulo" />
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <div class="wrapper-class">
+                        <label for="radio1">Perro</label>
+                        <input  type="radio" name="venta" id="radio" />
+                        <label for="radio2">Gato</label>
+                        <input  type="radio" name="venta" id="radio2" />
+                     </div>
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="description">Descripcion</label>
+                     <input class="form-control" type="text" placeholder="Descripcion" id="descripcion" />
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="price">Precio</label>
+                     <input class="form-control" type="number" placeholder="Precio" id="precio" />
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="raza"
+                        ><img
+                        src="./img/perro.svg"
+                        alt="Perrito"
+                        class="icon" />
+                     <input
+                        class="form-control" type="text"
+                        placeholder="Raza"
+                        id="raza"
+                        /></label>
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="nacimiento"
+                        ><img
+                        src="./img/calendario.svg"
+                        alt="Calendario"
+                        class="icon" />
+                     <input class="form-control" type="date" id="nacimiento" min='2000-01-01'
+                        /></label>
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col">
+                     <label for="vacunado">
+                        <img src="./img/vacuna.svg" alt="Vacuna" class="icon" />
+                        <select name="vacuna" class="form-control"id="vacunado">
+                           <option value="elegir">----ELEGIR----</option>
+                           <option value="si">Si</option>
+                           <option value="no">No</option>
+                        </select>
+                     </label>
+                  </div>
+               </div>
+               <div class="row form-group justify-content-between">
+                  <div class="col">
+                     <div class="btn-group btn-group-sm  flex-wrap" role="group">
+                        <button type="submit" id="btnGuardar" class="btn btn-dark btn-sm">
+                        <img
+                           src="./img/save.svg"
+                           alt="Guardar"
+                           class="button-icon svg-white"
+                           />Alta
+                        </button>
+                        <button type="submit" id="btnModificar" class="btn btn-dark btn-sm">
+                        Modificar
+                        </button>
+                        <button type="submit" id="btnEliminar" class="btn btn-dark btn-sm">
+                        Baja
+                        </button>
+                        <button type="submit" id="btnTraer" class="btn btn-dark btn-sm">
+                        Traer
+                        </button>
+                        <button type="submit" id="btnCancelar" class="btn btn-dark btn-sm">
+                        Cancelar
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </fieldset>
+      </div>
+
+      <div class="row mb-3" id="filtrosContainer">
+         <div class="col-sm-3 offset-2 form-group">
+            <label for="filtros">Filtrar Animal</label>
+            <select name="filtros" class="form-control" id="filtros">
+               <option value="elegir">----ELEGIR----</option>
+            </select>
+         </div>
+         <div class="col-sm-6 form-group d-flex justify-content-center pointer-event-none">
+            <label for="promedio">Promedio:
+               <input type="text" class="form-control" id="promedio" name="promedio" value="-" readonly>
+            </label>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="border d-flex justify-content-between flex-wrap py-2" id="checkboxDiv"></div>
+            <div class="d-flex justify-content-center">
+              <button  type="submit" class="btn btn-sm btn-dark justify-content-center" id="btnCargarTabla">Generar Tabla</button>
+            </div>
+        </div>
+      </div>
+      
+      <div class="table-responsive text-nowrap  table-container">
+         <table class="table table-striped table-hover table-bordered">
+            <tbody id="table"></tbody>
+         </table>
+      </div>
+      <footer class="page-footer font-small black pt-4">
+         <div class="container">
+            <ul class="list-unstyled list-inline text-center py-2">
+               <li class="list-inline-item">
+                  <a href="" class="btn btn-outline btn-rounded">Nosotros</a>
+               </li>
+               <li class="list-inline-item">
+                  <a href="" class="btn btn-outline btn-rounded">Anuncios</a>
+               </li>
+               <li class="list-inline-item">
+                  <a href="" class="btn btn-outline btn-rounded">Blog</a>
+               </li>
+               <li class="list-inline-item">
+                  <a href="" class="btn btn-outline btn-rounded">Contacto</a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer-copyright text-center py-3"> Todos los derechos reservados &copy
+         </div>
+      </footer>
+   </body>
+</html>
